@@ -1,13 +1,11 @@
 import React from 'react';
-const HomePage = () => {
+
+const UpcomingPage = () => {
     return (
         <div>
-
-
-            Home
-
+            UP
         </div>
     );
 };
 
-export default HomePage;
+export default UpcomingPage;
