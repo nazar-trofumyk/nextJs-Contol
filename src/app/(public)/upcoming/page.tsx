@@ -1,9 +1,11 @@
 import React from 'react';
+import MoviesComponent from "@/components/MovieListComponents/MoviesComponents/MoviesComponent";
 
 const UpcomingPage = () => {
     return (
         <div>
             UP
+            <MoviesComponent type={'upcoming'}/>
         </div>
     );
 };
