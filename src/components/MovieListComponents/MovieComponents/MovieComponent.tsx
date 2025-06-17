@@ -1,5 +1,7 @@
 import React, {FC} from 'react';
 import {IMovie} from "@/models/IMovie";
+import Link from "next/link";
+
 
 type MoviePropsType = {
 
@@ -11,7 +13,9 @@ const MovieComponent:FC<MoviePropsType> = ({movie}) => {
     return (
         <div>
             <img src={''}/>
-            <h2>{movie.titlem}</h2>
+            <h2><Link href={
+                {pathname: '/popular/'+movie.id.toString(),query:{data:JSON.stringify(movie)}}
+            }>{movie.title}</Link></h2>
         </div>
     );
 };
