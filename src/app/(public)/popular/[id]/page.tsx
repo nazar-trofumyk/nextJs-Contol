@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import DetailsInfoComponent from "@/components/DetailsInfoCopmonents/DetailsInfoComponent";
+import DetailsInfoComponent from "@/components/Details-Info-Copmonents/DetailsInfoComponent";
 import {getMovieByID} from "@/service/api.service";
 
 
