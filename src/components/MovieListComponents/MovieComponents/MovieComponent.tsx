@@ -4,17 +4,18 @@ import Link from "next/link";
 
 
 
-type MoviePropsType = {
 
+type MoviePropsType = {
     movie:IMovie
+    type: 'popular' | 'upcoming' | 'top_rated'
 }
 
 
-const MovieComponent:FC<MoviePropsType> = ({movie}) => {
+const MovieComponent:FC<MoviePropsType> = ({movie,type}) => {
     return (
         <div>
-            <img src={''}/>
-            <h2><Link href={{pathname:'/popular/' + movie.id.toString(), query:{data:JSON.stringify(movie)}}}>{movie.title}</Link></h2>
+
+            <h2><Link href={`/${type}/${movie.id.toString()}`}>{movie.title}</Link></h2>
         </div>
     );
 };

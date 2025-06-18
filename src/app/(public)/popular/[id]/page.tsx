@@ -1,22 +1,20 @@
 import React, {FC} from 'react';
-import {SearchParams} from "next/dist/server/request/search-params";
-import {transformParse} from "@/helpers/helpers";
-import {IMovie} from "@/models/IMovie";
+import DetailsInfoComponent from "@/components/DetailsInfoCopmonents/DetailsInfoComponent";
+import {getMovieByID} from "@/service/api.service";
 
-type SearchParamsProps ={
-    searchParams:Promise<SearchParams>
+
+type Props = {
+    params: {id:string}
 }
+const Page:FC<Props> = async ({params}) => {
 
-const PopularMoviesDetailsPage:FC<SearchParamsProps> = async ({searchParams}) => {
+  const movie = await getMovieByID(params.id);
 
-    const {data} = await searchParams;
-    console.log(data)
-    const parse = transformParse<IMovie>(data);
     return (
         <div>
-            {parse?.popularity}
+            {<DetailsInfoComponent movie={movie} />}
         </div>
     );
 };
 
-export default PopularMoviesDetailsPage;
+export default Page;

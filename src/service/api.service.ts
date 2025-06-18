@@ -8,3 +8,8 @@ export const getAllMovies = async (type:string):Promise<IMovie[]> => {
     const response:IResponse=await fetch(`${baseURL}/movie/${type}?api_key=${Key}`).then(value => value.json())
 return response.results
 }
+
+export const getMovieByID = async (id:string):Promise<IMovie> => {
+    const response = await fetch(`${baseURL}/movie/${id}?api_key=${Key}`).then(value => value.json());
+    return response
+}
