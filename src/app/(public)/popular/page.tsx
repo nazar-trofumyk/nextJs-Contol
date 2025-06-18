@@ -6,7 +6,6 @@ const PopularMoviePage = async () => {
 
     return (
         <div>
-           Popular
             <MoviesComponent type={'popular'}/>
         </div>
     );

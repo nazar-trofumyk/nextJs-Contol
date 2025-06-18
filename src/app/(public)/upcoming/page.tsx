@@ -4,7 +4,6 @@ import MoviesComponent from "@/components/MovieListComponents/MoviesComponents/M
 const UpcomingPage = () => {
     return (
         <div>
-            UP
             <MoviesComponent type={'upcoming'}/>
         </div>
     );

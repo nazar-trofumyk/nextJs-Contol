@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {IMovie} from "@/models/IMovie";
 import Link from "next/link";
-
+import './Movie.css'
 
 
 
@@ -13,10 +13,12 @@ type MoviePropsType = {
 
 const MovieComponent:FC<MoviePropsType> = ({movie,type}) => {
     return (
-        <div>
 
-            <h2><Link href={`/${type}/${movie.id.toString()}`}>{movie.title}</Link></h2>
-        </div>
+            <Link className={'movie-card'} href={`/${type}/${movie.id.toString()}`}>
+            <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={`poster of film ${movie.title}`}/>
+            <h2 className={'movie-title'}>{movie.title}</h2>
+            </Link>
+
     );
 };
 

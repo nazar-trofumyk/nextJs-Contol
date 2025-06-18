@@ -3,10 +3,10 @@ import DetailsInfoComponent from "@/components/Details-Info-Copmonents/DetailsIn
 import {getMovieByID} from "@/service/api.service";
 
 
-type Props = {
+type ParamsPropsType = {
     params: {id:string}
 }
-const Page:FC<Props> = async ({params}) => {
+const PopularDetailsPage:FC<ParamsPropsType> = async ({params}) => {
 
   const movie = await getMovieByID(params.id);
 
@@ -17,4 +17,4 @@ const Page:FC<Props> = async ({params}) => {
     );
 };
 
-export default Page;
+export default PopularDetailsPage;

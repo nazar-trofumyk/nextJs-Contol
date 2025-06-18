@@ -1,18 +1,12 @@
 
-:root {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --accent-color: #FFD700;
-    --hover-bg: rgba(255, 255, 255, 0.05);
-}
 header {
 font-family: "Candara Light",sans-serif;
     display: flex;
 justify-content:space-around;
 align-items: center;
 height: 100px;
-    background-color: var(--bg-color);
-        color: var(--text-color);
+    background-color:#121212;
+        color: #e0e0e0;
         padding: 16px 32px;
         position: sticky;
         top: 0;

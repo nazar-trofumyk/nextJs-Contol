@@ -4,7 +4,7 @@ import MoviesComponent from "@/components/MovieListComponents/MoviesComponents/M
 const TopRatedMoviePage = () => {
     return (
         <div>
-            TOP
+
             <MoviesComponent type={'top_rated'}/>
         </div>
     );
