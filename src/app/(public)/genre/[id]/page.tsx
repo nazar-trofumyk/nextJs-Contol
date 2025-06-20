@@ -13,7 +13,7 @@ const GenrePage: FC<ParamsPropsType> = async ({params}) => {
     const movies = await getMovieByGenre(genreId);
 
     return (
-        <div>
+        <div className={'movie-container'}>
             {movies.map(movie => < MovieComponent key={movie.id} movie={movie}/>)}
         </div>
     );
