@@ -14,7 +14,7 @@ const MoviesComponent:FC<TypeProps> = async ({type}) => {
 
     return (
         <div className={'movie-container'}>
-            {movies.map(movie => <MovieComponent type={type} key={movie.id} movie={movie} />)}
+            {movies.map(movie => <MovieComponent  key={movie.id} movie={movie} />)}
 
         </div>
     );

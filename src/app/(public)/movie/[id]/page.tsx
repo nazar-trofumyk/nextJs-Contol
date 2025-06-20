@@ -6,7 +6,7 @@ type ParamsPropsType = {
     params:{id:string}
 }
 
-const UpcomingDetailsPage:FC<ParamsPropsType> =async ({params}) => {
+const MovieDetailsPage:FC<ParamsPropsType> =async ({params}) => {
 
     const movie = await getMovieByID(params.id);
 
@@ -17,4 +17,4 @@ const UpcomingDetailsPage:FC<ParamsPropsType> =async ({params}) => {
     );
 };
 
-export default UpcomingDetailsPage;
+export default MovieDetailsPage;
