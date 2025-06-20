@@ -1,5 +1,7 @@
 import {IMovie} from "@/models/IMovie";
 import {IResponse} from "@/models/IResponse";
+import {IGenres} from "@/models/IGenres";
+import {IGenresResponse} from "@/models/IGenresResponse";
 
 export const baseURL = process.env.NEXT_PUBLIC_BASE_URL
 export const Key = process.env.NEXT_PUBLIC_API_KEY
@@ -19,4 +21,10 @@ export const searchMovie = async (query:string):Promise<IMovie[]> => {
 console.log(response.results)
     return response.results
 
+}
+
+export const getGenres = async ():Promise<IGenres[]> => {
+    const response:IGenresResponse = await fetch(`${baseURL}/genre/movie/list?api_key=${Key}`)
+        .then(value => value.json())
+return response.genres
 }
