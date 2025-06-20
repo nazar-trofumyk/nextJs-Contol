@@ -28,3 +28,9 @@ export const getGenres = async ():Promise<IGenres[]> => {
         .then(value => value.json())
 return response.genres
 }
+
+export const getMovieByGenre = async (genreId:number):Promise<IMovie[]> => {
+    const response:IResponse = await fetch(`${baseURL}/discover/movie?api_key=${Key}&with_genres=${genreId}`)
+        .then(value => value.json());
+return response.results
+}
