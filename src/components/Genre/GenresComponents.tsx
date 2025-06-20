@@ -7,7 +7,7 @@ const GenresComponents =async () => {
 
     return (
         <div>
-            {genres.map(genre =>)}
+            {genres.map(genre =><GenreComponent/>)}
         </div>
     );
 };
