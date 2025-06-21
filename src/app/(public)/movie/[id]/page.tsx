@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {getMovieByID} from "@/service/api.service";
+import {getMovieByID} from "@/service/getMovie.service";
 import DetailsInfoComponent from "@/components/Details-Info-Copmonents/DetailsInfoComponent";
 
 type ParamsPropsType = {

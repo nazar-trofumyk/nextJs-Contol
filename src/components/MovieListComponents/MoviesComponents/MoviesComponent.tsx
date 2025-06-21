@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {getAllMovies} from "@/service/api.service";
+import {getAllMovies} from "@/service/getMovie.service";
 import MovieComponent from "@/components/MovieListComponents/MovieComponents/MovieComponent";
 import './Movies.css'
  type TypeProps = {

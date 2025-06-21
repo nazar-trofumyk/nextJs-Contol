@@ -1,6 +1,7 @@
 import React from 'react';
-import {getGenres} from "@/service/api.service";
+
 import GenreComponent from "@/components/Genre/GenreComponent";
+import {getGenres} from "@/service/getGenres.service";
 
 const GenresComponents =async () => {
 

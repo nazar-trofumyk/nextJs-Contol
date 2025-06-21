@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
-import {getMovieByGenre} from "@/service/api.service";
+
 import MovieComponent from "@/components/MovieListComponents/MovieComponents/MovieComponent";
+import {getMovieByGenre} from "@/service/getGenres.service";
 
 
 type ParamsPropsType ={
@@ -9,9 +10,7 @@ type ParamsPropsType ={
 
 const GenrePage: FC<ParamsPropsType> = async ({params}) => {
 
-   const genreId = +params.id
-    const movies = await getMovieByGenre(genreId);
-
+const movies = await getMovieByGenre(+params.id);
     return (
         <div className={'movie-container'}>
             {movies.map(movie => < MovieComponent key={movie.id} movie={movie}/>)}
