@@ -1,6 +1,6 @@
 import {IMovie} from "@/models/IMovie";
 import {IResponse} from "@/models/IResponse";
-import {baseURL, Key} from "@/service/api.key-url";
+import {baseURL, Key} from "@/service/api.config";
 
 export const searchMovie = async (query:string):Promise<IMovie[]> => {
     const response:IResponse =await fetch(`${baseURL}/search/movie?query=${query}&api_key=${Key}`)

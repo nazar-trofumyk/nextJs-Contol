@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {getMovieByID} from "@/service/getMovie.service";
-import DetailsInfoComponent from "@/components/Details-Info-Copmonents/DetailsInfoComponent";
+import DetailsInfoComponent from "@/components/Movie-Details-Component/DetailsInfoComponent";
 
 type ParamsPropsType = {
     params:{id:string}

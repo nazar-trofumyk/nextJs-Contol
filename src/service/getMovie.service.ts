@@ -2,7 +2,7 @@ import {IMovie} from "@/models/IMovie";
 import {IResponse} from "@/models/IResponse";
 import {IGenres} from "@/models/IGenres";
 import {IGenresResponse} from "@/models/IGenresResponse";
-import {baseURL, Key} from "@/service/api.key-url";
+import {baseURL, Key} from "@/service/api.config";
 
 
 export const getAllMovies = async (type:string):Promise<IMovie[]> => {
