@@ -1,0 +1,43 @@
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+margin-right: 20px;
+}
+input[type="search"] {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #999;
+    background-color: #2b2b2b;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="search"]:focus {
+    border-color: #ffcc00;
+}
+
+.button-send {
+
+    padding: 8px 16px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-send:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+.error-msg {
+    color: #ff4d4f;
+    font-size: 18px;
+    margin-top: 4px;
+}

@@ -1,7 +1,5 @@
 import {IMovie} from "@/models/IMovie";
 import {IResponse} from "@/models/IResponse";
-import {IGenres} from "@/models/IGenres";
-import {IGenresResponse} from "@/models/IGenresResponse";
 import {baseURL, Key} from "@/service/api.config";
 
 

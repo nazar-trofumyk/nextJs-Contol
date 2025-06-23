@@ -2,6 +2,9 @@
 import React from 'react';
 import {useForm} from "react-hook-form";
 import {useRouter} from "next/navigation";
+import {filmValidator} from "@/validator/SearchValidator";
+import {joiResolver} from "@hookform/resolvers/joi";
+import './SearchFilm.css'
 
 interface ISearchForm{
     query:string
@@ -14,7 +17,7 @@ const router = useRouter();
     formState:{errors,isValid},
     register
 
-} = useForm<ISearchForm>({mode:'all',});
+} = useForm<ISearchForm>({mode:'all',resolver:joiResolver(filmValidator)});
 
 const onSubmit = (form:ISearchForm)=> {
     console.log(form)
@@ -22,12 +25,12 @@ const onSubmit = (form:ISearchForm)=> {
 }
 
     return (
-        <form action={'/search'} onSubmit={handleSubmit(onSubmit)}>
+        <form  action={'/search'} onSubmit={handleSubmit(onSubmit)}>
             <label>
                 <input type={'search'} placeholder={'Search film'} {...register("query")}/>
                 {errors.query && <p className={'error-msg'}>{errors.query.message}</p>}
             </label>
-            <button disabled={!isValid}>Search</button>
+            <button className={'button-send'} disabled={!isValid}>Search</button>
         </form>
     );
 };
