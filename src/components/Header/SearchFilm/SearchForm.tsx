@@ -14,7 +14,7 @@ const router = useRouter();
     formState:{errors,isValid},
     register
 
-} = useForm<ISearchForm>();
+} = useForm<ISearchForm>({mode:'all',});
 
 const onSubmit = (form:ISearchForm)=> {
     console.log(form)
@@ -25,8 +25,9 @@ const onSubmit = (form:ISearchForm)=> {
         <form action={'/search'} onSubmit={handleSubmit(onSubmit)}>
             <label>
                 <input type={'search'} placeholder={'Search film'} {...register("query")}/>
+                {errors.query && <p className={'error-msg'}>{errors.query.message}</p>}
             </label>
-            <button>Search</button>
+            <button disabled={!isValid}>Search</button>
         </form>
     );
 };
