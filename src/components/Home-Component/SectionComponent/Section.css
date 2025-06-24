@@ -1,0 +1,17 @@
+section {
+    border:5px solid;
+    display: flex;
+    align-items: center;
+justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+border-radius: 20px;
+    width: 90%;
+}
+.box-in-section {
+    display: flex;
+justify-content:center;
+align-items:center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
