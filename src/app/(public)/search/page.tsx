@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import MovieComponent from "@/components/MovieListComponents/MovieComponents/MovieComponent";
+import MovieComponent from "@/components/Movie-List-Components/MovieComponents/MovieComponent";
 import {searchMovie} from "@/service/searchMovie.service";
 
 type SearchPropsType = {

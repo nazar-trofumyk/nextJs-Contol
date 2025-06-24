@@ -3,8 +3,8 @@ import {IResponse} from "@/models/IResponse";
 import {baseURL, Key} from "@/service/api.config";
 
 
-export const getAllMovies = async (type:string):Promise<IMovie[]> => {
-    const response:IResponse=await fetch(`${baseURL}/movie/${type}?api_key=${Key}`).then(value => value.json())
+export const getAllMovies = async (type:string,page:number):Promise<IMovie[]> => {
+    const response:IResponse=await fetch(`${baseURL}/movie/${type}?api_key=${Key}&page=${page}`).then(value => value.json())
 return response.results
 }
 

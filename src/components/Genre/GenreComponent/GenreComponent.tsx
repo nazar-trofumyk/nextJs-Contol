@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {IGenres} from "@/models/IGenres";
 import Link from "next/link";
-
+import './Genre.css'
 
 type GenrePropsType ={
     genre:IGenres
@@ -10,7 +10,7 @@ type GenrePropsType ={
 const GenreComponent:FC<GenrePropsType> = ({genre}) => {
     return (
         <li>
-            <Link href={`/genre/${genre.id}`}> {genre.name} </Link>
+            <Link className={'link-genres'} href={`/genre/${genre.id}`}> {genre.name} </Link>
         </li>
     );
 };

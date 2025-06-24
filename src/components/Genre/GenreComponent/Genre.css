@@ -1,0 +1,22 @@
+.link-genres {
+    text-decoration: none;
+    color: #f1f1f1;
+    background-color: #333;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Segoe UI", sans-serif;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.link-genres:hover {
+    background-color: #555;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.link-genres:active {
+    background-color: #777;
+    transform: scale(0.95);
+}
