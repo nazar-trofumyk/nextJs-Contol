@@ -12,7 +12,7 @@ const UpcomingPage:FC<Props> = ({searchParams}) => {
 
     return (
         <div>
-            <MoviesComponent type={'upcoming'}/>
+            <MoviesComponent type={'upcoming'} page={page}/>
             <PaginationComponent currentPage={page} basePath={'upcoming'}/>
         </div>
     );

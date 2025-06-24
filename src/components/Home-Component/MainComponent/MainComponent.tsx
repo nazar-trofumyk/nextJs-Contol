@@ -4,9 +4,9 @@ import SectionComponent from "@/components/Home-Component/SectionComponent/Secti
 import './Main.css'
 const MainComponent = async () => {
 
-    const popularMovies = await getAllMovies('popular').then(movie =>movie.slice(0,5));
-    const upcomingMovies = await getAllMovies('upcoming').then(movie =>movie.slice(0,5));
-    const topMovies = await getAllMovies('top_rated').then(movie =>movie.slice(0,5));
+    const popularMovies = await getAllMovies('popular',1).then(movie =>movie.slice(0,5));
+    const upcomingMovies = await getAllMovies('upcoming',1).then(movie =>movie.slice(0,5));
+    const topMovies = await getAllMovies('top_rated',1).then(movie =>movie.slice(0,5));
 
     return (
         <main>
