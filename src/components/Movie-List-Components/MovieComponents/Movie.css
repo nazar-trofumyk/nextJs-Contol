@@ -13,7 +13,7 @@ flex-direction: column;
 border-radius: 20px;
     background-color: #121212;
 gap: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тінь */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     overflow: hidden;
@@ -24,6 +24,6 @@ gap: 5px;
 }
 .movie-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3); /* золота тінь */
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3);
     background-color: #1a1a1a;
 }

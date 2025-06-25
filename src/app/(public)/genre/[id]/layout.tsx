@@ -3,11 +3,11 @@ import React from "react";
 
 
 export const metadata:Metadata ={
-    title:'Top rated movies '
+    title:'GenreId Layout metadata'
 }
 type Props = {children:React.ReactNode}
 
-const TopRatedMoviesLayout = ({children}:Props) => {
+const GenreIdLayout = ({children}:Props) => {
     return (
         <div>
             {children}
@@ -15,4 +15,4 @@ const TopRatedMoviesLayout = ({children}:Props) => {
     );
 };
 
-export default TopRatedMoviesLayout;
+export default GenreIdLayout;

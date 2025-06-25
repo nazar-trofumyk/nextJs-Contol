@@ -10,7 +10,7 @@ export const getGenres = async ():Promise<IGenres[]> => {
     return response.genres
 }
 
-export const getMovieByGenre = async (genreId:number,page:number=1):Promise<IMovie[]> => {
+export const getMovieByGenre = async (genreId:string,page:number=1):Promise<IMovie[]> => {
     const response:IResponse = await fetch(`${baseURL}/discover/movie?api_key=${Key}&with_genres=${genreId}&page=${page}`)
         .then(value => value.json());
     return response.results

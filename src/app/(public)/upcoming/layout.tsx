@@ -3,7 +3,7 @@ import React from "react";
 
 
 export const metadata:Metadata ={
-    title:'Upcoming movies Layout metadata'
+    title:'Upcoming movies '
 }
 type Props = {children:React.ReactNode}
 
