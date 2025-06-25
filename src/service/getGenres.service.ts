@@ -2,7 +2,7 @@ import {IGenres} from "@/models/IGenres";
 import {IGenresResponse} from "@/models/IGenresResponse";
 import {baseURL, Key} from "@/service/api.config";
 import {IMovie} from "@/models/IMovie";
-import {IResponse} from "@/models/IResponse";
+import {IMovieResponse} from "@/models/IMovieResponse";
 
 export const getGenres = async ():Promise<IGenres[]> => {
     const response:IGenresResponse = await fetch(`${baseURL}/genre/movie/list?api_key=${Key}`)
@@ -11,7 +11,7 @@ export const getGenres = async ():Promise<IGenres[]> => {
 }
 
 export const getMovieByGenre = async (genreId:string,page:number=1):Promise<IMovie[]> => {
-    const response:IResponse = await fetch(`${baseURL}/discover/movie?api_key=${Key}&with_genres=${genreId}&page=${page}`)
+    const response:IMovieResponse = await fetch(`${baseURL}/discover/movie?api_key=${Key}&with_genres=${genreId}&page=${page}`)
         .then(value => value.json());
     return response.results
 }

@@ -1,6 +1,6 @@
 import {IMovie} from "@/models/IMovie";
 
-export interface IResponse {
+export interface IMovieResponse {
     pages:number
     results:IMovie[]
     total_pages:number
